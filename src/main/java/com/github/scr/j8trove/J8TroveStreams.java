@@ -1,6 +1,6 @@
 package com.github.scr.j8trove;
 
-import com.github.scr.j8trove.iterators.J8TDoubleIterator;
+import com.github.scr.j8trove.iterators.J8TDoubleSpliterator;
 import com.github.scr.j8trove.iterators.J8TIntSpliterator;
 import com.github.scr.j8trove.iterators.J8TLongSpliterator;
 import gnu.trove.TDoubleCollection;
@@ -49,6 +49,6 @@ public class J8TroveStreams {
      * @return a double stream
      */
     public static DoubleStream doubleStreamOf(TDoubleCollection doubleCollection) {
-        return StreamSupport.doubleStream(new J8TDoubleIterator(doubleCollection), false);
+        return StreamSupport.doubleStream(new J8TDoubleSpliterator(doubleCollection), false);
     }
 }

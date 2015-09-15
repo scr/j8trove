@@ -11,10 +11,10 @@ import java.util.function.DoubleConsumer;
  *
  * @author scr
  */
-public class J8TDoubleIterator extends Spliterators.AbstractDoubleSpliterator {
+public class J8TDoubleSpliterator extends Spliterators.AbstractDoubleSpliterator {
     private final TDoubleIterator DOUBLE_ITERATOR;
 
-    public J8TDoubleIterator(TDoubleCollection doubleCollection) {
+    public J8TDoubleSpliterator(TDoubleCollection doubleCollection) {
         super(doubleCollection.size(), SIZED);
         DOUBLE_ITERATOR = doubleCollection.iterator();
     }
